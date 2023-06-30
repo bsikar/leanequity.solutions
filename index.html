@@ -28,7 +28,7 @@
       }
 
       .card-header {
-        background-color: #f8f9fa;
+        background-color: transparent; /* Updated background color to transparent */
         padding: 10px 15px;
         margin: 20px;
         border-bottom: none;
@@ -36,11 +36,88 @@
       }
 
       /* Adjust the width of the About and Contact sections */
+
       #about .card,
       #contact .card {
         max-width: 540px;
         margin-left: auto;
         margin-right: auto;
+      }
+
+      /* Center the carousel arrows */
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: auto;
+
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 0;
+
+        margin-bottom: 0;
+      }
+
+      /* Add custom styling to the carousel arrows */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border-radius: 50%;
+        padding: 8px;
+        font-size: 24px;
+      }
+
+      .carousel-control-prev-icon {
+        margin-right: 5px;
+      }
+
+      .carousel-control-next-icon {
+        margin-left: 5px;
+      }
+
+      /* Adjust the alignment of the About section */
+      #about {
+        background-color: #f4f4f4;
+        padding: 50px 0;
+        text-align: left;
+        margin-top: 50px;
+      }
+
+      #about .card {
+        background-color: #f4f4f4; /* Updated background color */
+        box-shadow: none;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 540px;
+      }
+
+      #about .card-header {
+        padding: 10px 15px;
+        margin: 0;
+        font-size: 20px;
+        text-align: left;
+        background-color: #f4f4f4; /* Updated background color */
+      }
+
+      #about .card-body {
+        padding: 20px;
+        background-color: #f4f4f4; /* Added background color for text */
+      }
+
+      #about .card-title {
+        font-size: 28px;
+        font-weight: bold;
+        color: #3c2e19;
+        margin: 0;
+      }
+
+      #about .card-text {
+        text-align: justify;
+        margin-top: 20px;
+      }
+
+      a.mail-link {
+        color: #3c2e19;
+        text-decoration: none;
       }
     </style>
   </head>
@@ -73,7 +150,7 @@
             <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
+            <a class="nav-link" href="#specialties">Specialties</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
@@ -102,84 +179,117 @@
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-5">
+    <!-- Specialties Section -->
+    <section id="specialties" class="py-5">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h2 class="card-title">Goal Alignment</h2>
+        <h2 class="text-center my-5">Our Specialties</h2>
+        <div
+          id="specialtiesCarousel"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header">
+                      <h2 class="card-title">Goal Alignment</h2>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">
+                        We start by assessing how your clients define value and
+                        holistically align shop-floor metrics to department
+                        metrics and finally to Business Unit level objectives.
+                        We believe driving shop-floor leading indicators is key
+                        to achieving lagging Key Performance Indicator (KPI)
+                        achievement and increasing company collaboration.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header">
+                      <h2 class="card-title">Waste Reduction</h2>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">
+                        Our preferred tool is to use Value Stream Mapping (VSM)
+                        to identify opportunities to reduce waste throughout key
+                        processes. The process of creating a value stream map
+                        takes all the necessary people, processes, information
+                        and inventory, and displays them in a flowchart format.
+                        By visualizing all elements that go into creating a
+                        product or service, we can apply lean principles to
+                        reduce waste in specific areas of your processes.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="card-body">
-                <p class="card-text">
-                  We start by assessing how your clients define value and
-                  holistically align shop-floor metrics to department metrics
-                  and finally to Business Unit level objectives. We believe
-                  driving shop-floor leading indicators is key to achieving
-                  lagging Key Performance Indicator (KPI) achievement and
-                  increasing company collaboration.
-                </p>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header">
+                      <h2 class="card-title">Balancing Supply with Demand</h2>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">
+                        We will review your current Sales & Operations Planning
+                        (S&OP) process and discuss possible enhancements. The
+                        purpose of S&OP is to coordinate across business units,
+                        increase transparency, balance supply and demand, and
+                        achieve increased profitability. We start by taking a
+                        simplified view of customer demand by SKU/PN level,
+                        review current manufacturing/repair capacity, and
+                        collectively discuss options for better demand/supply
+                        alignment.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header">
+                      <h2 class="card-title">Commercial Excellence</h2>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">
+                        We will review your go-to-market approach for each
+                        client segment. Separating your client such as growth
+                        clients, strategic clients and transactional clients
+                        will help align expectations at appropriate levels.
+                        Finally, we will assist you with creating a reporting
+                        system that can help identify "early-warning" signals.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <a
+            class="carousel-control-prev"
+            href="#specialtiesCarousel"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
 
-          <div class="col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h2 class="card-title">Waste Reduction</h2>
-              </div>
-              <div class="card-body">
-                <p class="card-text">
-                  Our preferred tool is to use Value Stream Mapping (VSM) to
-                  identify opportunities to reduce waste throughout key
-                  processes. The process of creating a value stream map takes
-                  all the necessary people, processes, information and
-                  inventory, and displays them in a flowchart format. By
-                  visualizing all elements that go into creating a product or
-                  service, we can apply lean principles to reduce waste in
-                  specific areas of your processes.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h2 class="card-title">Balancing Supply with Demand</h2>
-              </div>
-              <div class="card-body">
-                <p class="card-text">
-                  We will review your current Sales & Operations Planning (S&OP)
-                  process and discuss possible enhancements. The purpose of S&OP
-                  is to coordinate across business units, increase transparency,
-                  balance supply and demand, and achieve increased
-                  profitability. We start by taking a simplified view of
-                  customer demand by SKU/PN level, review current
-                  manufacturing/repair capacity, and collectively discuss
-                  options for better demand/supply alignment.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h2 class="card-title">Commercial Excellence</h2>
-              </div>
-              <div class="card-body">
-                <p class="card-text">
-                  We will review your go-to-market approach for each client
-                  segment. Separating your client such as growth clients,
-                  strategic clients and transactional clients will help align
-                  Sales, Business Development, Account Management and Customer
-                  Service personnel. Setting up growth strategies, KPIs and
-                  growth incentives by client segment will optimize growth
-                  potential.
-                </p>
-              </div>
-            </div>
-          </div>
+          <a
+            class="carousel-control-next"
+            href="#specialtiesCarousel"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
     </section>
@@ -191,12 +301,17 @@
           <div class="card-header">
             <h2 class="card-title">Contact</h2>
           </div>
-
           <div class="card-body">
-            <ul class="list-group list-group-flush">
+            <p class="card-text">
+              For any inquiries or to request a consultation, please feel free
+              to reach out to us using the contact details below:
+            </p>
+            <ul class="list-group">
               <li class="list-group-item">
-                <strong>Email:</strong> leanequity@tutanota.com
-              </li>
+                <strong>Email:</strong>
+                <a class="mail-link" href="mailto:leanequity@tutanota.com"
+                  >leanequity@tutanota.com</a
+                >
               </li>
             </ul>
           </div>
@@ -216,17 +331,8 @@
     </footer>
 
     <!-- Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   </body>
 </html>
